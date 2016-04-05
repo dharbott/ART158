@@ -4,26 +4,29 @@
     <meta charset="utf-8">
     <title>A-Frame sword.obj</title>
     <meta name="description" content="A-Frame">
-    <script src="aframe.js"></script>
+    <script src="https://aframe.io/releases/latest/aframe.js"></script>
   </head>
   <body>
     <a-scene>
+	<a-assets>
+    	    <a-asset-item id="sword-obj" src="sword.obj"></a-asset-item>
+    	</a-assets>
+    	<a-entity obj-model="obj: #sword-obj"></a-entity>
+    	<!--
     	<a-entity position="-5 0 -10"
                 material="color: #7BC8A4; opacity: 1"
                 obj-loader="src: url(baymax.obj);">
       	</a-entity>
-    	<!--
+      	
     	
-    	<a-assets>
-    	    <a-asset-item id="baymax-obj" src="baymax.obj"></a-asset-item>
     	    <a-asset-item id="baymax-mtl" src="baymax.mtl"></a-asset-item>
     	</a-assets>
     	<a-obj-model src"#baymax-obj" mtl="#baymax-mtl"></a-obj-model>
     	
-      	  <a-model src="sword.obj" format="obj" position="0 0 0"></a-model>
-	  <a-entity geometry="primitive: sphere; radius: 1000;"
-                material="color: #4CC3D9; shader: flat; side: double;"></a-entity>
+      	  
+        <a-model src="baymax.obj" format="obj" position="0 0 0"></a-model>
                 -->
+	<a-entity geometry="primitive: sphere; radius: 1000;" material="color: #4CC3D9; shader: flat; side: double;"></a-entity>
     </a-scene>
   </body>
 </html>
